@@ -41,6 +41,10 @@ nav img {
     vertical-align: middle;
 }
 
+main{
+    height:85vh;
+}
+
 #menu {
     opacity: 0.65;
 }
@@ -173,8 +177,6 @@ button:focus {
 }
 
 footer {
-    position: absolute;
-    bottom: 0;
     width: 100%;
 }
 
