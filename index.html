@@ -7,8 +7,10 @@
     <title>Google CLONE</title>
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="googleClone.css">
-    <script src="googleClone.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
+    <!-- <link rel="stylesheet" href="googleClone.css"> -->
+    <link rel="stylesheet" href="dist/css/style.css">
+    <script src="/googleClone.js"></script>
 </head>
 
 <!-- TODO -->
@@ -20,16 +22,16 @@
     <header>
         <nav>
             <ul>
-                <li class="navLinks">
+                <li>
                     <a href="">Gmail</a>
                 </li>
-                <li class="navLinks">
+                <li>
                     <a href="">Images</a>
                 </li>
-                <li class="navLinks">
-                    <a href="" title="Google Apps"><img id="menu" src="https://img.icons8.com/material-sharp/24/000000/squared-menu.png" /></a>
+                <li>
+                    <a href="" title="Google Apps"><i class="fas fa-th" id="menu"></i></a>
                 </li>
-                <li class="navLinks">
+                <li>
                     <a href="">
                         <div id="G">G</div>
                     </a>
@@ -38,29 +40,45 @@
         </nav>
     </header>
     <main>
-
         <section id="google">
-            <span class="size blue">G</span>
-            <span class="size red">o</span>
-            <span class="size yellow">o</span>
-            <span class="size blue">g</span>
-            <span class="size green">l</span>
-            <span class="size red e">e</span>
+            <span class="blue">G</span>
+            <span class="red">o</span>
+            <span class="yellow">o</span>
+            <span class="blue">g</span>
+            <span class="green">l</span>
+            <span class="red" id="e">e</span>
         </section>
         <section id="search">
-            <form>
+            <form id="searchForm">
                 <div id="is">
-                    <img id="inputImage" src="https://img.icons8.com/material-outlined/24/000000/search--v1.png" />
-                    <input type="text" title="Search" autofocus>
-                    <img id="voiceSearch" src="https://www.fornhamchiropractic.co.uk/wp-content/uploads/2019/04/ok-google.png" alt="voice search" title="Search by voice">
+                    <i class="fas fa-search" id="spng"></i>
+                    <input type="text" title="Search" id="searchBar">
+                    <i class="fas fa-microphone" id="vpng"></i>
+                    <i class="fas fa-times" id="crosspng" tabindex="0" role="button"></i>
+                </div>
+                <!-- when api is called -->
+                <!-- <hr style="width: 90%;margin: 0 auto;border-color: #0000001a;"> -->
+                <div id="searchBox">
+                    <div id="stats"></div>
+                    <div id="searchResults">
+                        <div class="searchItems">
+                            <div class="searchTitle">
+                                <a href="">dog</a>
+                            </div>
+                            <div class="searchContents">
+                                <img src="" alt="">
+                                <p>Dog are obedient.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div id="bt">
                     <button>Google Search</button>
-                    <button onclick="luckFun()">I'm Feeling Lucky</button>
+                    <button id="lucky">I'm Feeling Lucky</button>
                 </div>
             </form>
         </section>
-        <section id="dl">Google offered in: <a href="#">हिन्दी </a><a href="#" onclick="lanCall()"> বাংলা తెలుగు मराठी தமிழ் ગુજરાતી ಕನ್ನಡ മലയാളം ਪੰਜਾਬੀ</a>
+        <section id="dl">Google offered in: <a href="#">हिन्दी </a><a href="#" id="lan"> বাংলা తెలుగు मराठी தமிழ் ગુજરાતી ಕನ್ನಡ മലയാളം ਪੰਜਾਬੀ</a>
         </section>
     </main>
     <footer>
