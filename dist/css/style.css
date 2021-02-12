@@ -3,6 +3,8 @@
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-size: 22px;
+  -webkit-transition-duration: 500ms;
+          transition-duration: 500ms;
 }
 
 @media screen and (min-width: 2000px) {
@@ -77,7 +79,7 @@ header nav ul li a #G {
 }
 
 main {
-  height: calc(90vh - 5.8rem);
+  min-height: calc(100vh - 12.4rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -89,12 +91,18 @@ main {
       -ms-flex-align: center;
           align-items: center;
   margin-top: 2rem;
+  margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 700px) {
   main {
-    height: calc(95vh - 5.8rem);
+    min-height: calc(100vh - 9.5rem);
   }
+}
+
+main h1 {
+  position: absolute;
+  left: -100000px;
 }
 
 main span {
@@ -126,6 +134,7 @@ main .green {
 }
 
 main #e {
+  display: inline-block;
   -webkit-transform: rotate(-15deg);
           transform: rotate(-15deg);
 }
@@ -133,6 +142,7 @@ main #e {
 main #search {
   margin: 1.5rem auto;
   width: 100%;
+  margin-bottom: 0.6rem;
 }
 
 @media screen and (min-width: 700px) {
@@ -159,19 +169,16 @@ form #is {
   height: 2.3rem;
   text-align: center;
   margin: 0px auto;
-  margin-bottom: 1.5rem;
-}
-
-@media screen and (min-width: 375px) {
-  form #is {
-    margin-right: 15px;
-    margin-left: 15px;
-  }
 }
 
 form #is #spng {
   color: #4285f4;
   vertical-align: middle;
+}
+
+form #is label {
+  position: absolute;
+  left: -100000px;
 }
 
 form #is input {
@@ -183,6 +190,7 @@ form #is input {
   -webkit-writing-mode: sideways-lr !important;
       -ms-writing-mode: sideways-lr !important;
           writing-mode: sideways-lr !important;
+  font-size: 0.9rem;
 }
 
 @media screen and (min-width: 960px) {
@@ -214,16 +222,26 @@ form #is #crosspng:focus {
   cursor: pointer;
   vertical-align: text-top;
   outline: none;
+  -webkit-transition-duration: initial;
+          transition-duration: initial;
+}
+
+form #is #clearConfirmation {
+  position: absolute;
+  left: -100000px;
 }
 
 form #is:hover,
 form #is:focus {
   -webkit-box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.3);
           box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.3);
+  -webkit-transition-duration: initial;
+          transition-duration: initial;
 }
 
 form #bt {
   text-align: center;
+  margin: 19px auto;
 }
 
 form #bt button {
@@ -237,11 +255,15 @@ form #bt button {
 form #bt button:hover {
   -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
           box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  -webkit-transition-duration: initial;
+          transition-duration: initial;
 }
 
 form #bt button:focus {
   border: 1px solid #4d90fe;
   outline: none;
+  -webkit-transition-duration: initial;
+          transition-duration: initial;
 }
 
 #dl {
@@ -260,7 +282,7 @@ footer {
 footer .footer {
   background-color: #f2f2f2;
   border-top: 1px solid #dadce0;
-  color: rgba(0, 0, 0, 0.54);
+  color: #000000ab;
   line-height: 30px;
   font-size: 0.7rem;
   padding-left: 15px;
@@ -274,7 +296,7 @@ footer .footer {
 
 footer .footer a {
   font-size: 0.7rem;
-  color: rgba(0, 0, 0, 0.54);
+  color: #000000ab;
   padding-right: 15px;
 }
 
@@ -295,9 +317,8 @@ footer .footer a {
   }
 }
 
-#searchBox {
-  border: 1px solid #0000001a;
-  border-top: 0;
+#searchBox,
+.searchBox {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -306,13 +327,28 @@ footer .footer a {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  -webkit-box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.302);
-          box-shadow: 0px 3px 7px 0px rgba(0, 0, 0, 0.302);
 }
 
-#searchBox .searchItems {
+@media screen and (min-width: 700px) {
+  #searchBox,
+  .searchBox {
+    padding: 0 7px;
+  }
+}
+
+#searchBox #stats,
+.searchBox #stats {
+  font-size: 0.7rem;
+  padding-top: 10px;
+  padding-left: 10px;
+  color: #5f5b5be6;
+}
+
+#searchBox .searchItems,
+.searchBox .searchItems {
   padding-left: 10px;
   padding-top: 10px;
+  padding-right: 10px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -322,13 +358,52 @@ footer .footer a {
           flex-direction: column;
 }
 
-#searchBox .searchItems a {
+#searchBox .searchItems a,
+.searchBox .searchItems a {
   text-decoration: underline;
   color: purple;
+  font-size: 0.85rem;
 }
 
-#searchBox .searchItems p {
+#searchBox .searchItems .searchContents,
+.searchBox .searchItems .searchContents {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 10px;
+}
+
+#searchBox .searchItems .searchContents img,
+.searchBox .searchItems .searchContents img {
+  padding-right: 15px;
+}
+
+#searchBox .searchItems .searchContents p,
+.searchBox .searchItems .searchContents p {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  margin: 0;
+}
+
+.main {
+  margin-top: 1rem;
+  min-height: calc(100vh - 8.8rem);
+}
+
+.alphabets {
+  font-size: 1.8rem;
+  letter-spacing: normal;
+}
+
+.form {
+  border: 1px solid #0000001a;
+  border-top: 0;
+  -webkit-box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.301);
+          box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.301);
+  border-radius: 30px;
+}
+
+.none {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */

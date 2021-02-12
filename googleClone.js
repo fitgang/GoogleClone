@@ -6,7 +6,7 @@ document.addEventListener("readystatechange", (event) => {
 });
 
 function initApp() {
-    // console.log("init working");
+    // mainHeight();
     setSearchFocus();
     // 3 listeners
     const input = document.getElementById("searchBar");
@@ -52,6 +52,7 @@ function deleteSearchResults() {
 
 function clearSearchText(event) {
     event.preventDefault();
+    document.getElementById("clearConfirmation").innerHTML = "Entry field cleared.";
     document.getElementById("searchBar").value = "";
     const clear = document.getElementById("crosspng");
     clear.style.display = "none";
@@ -70,11 +71,13 @@ function clearPushListener(event) {
 async function pocessTheSearch() {
     clearStatsLine();
     const finalTerm = getSearchTerm();
-    // console.log(finalTerm);
-    const resultArray = await retrieveSearchResults(finalTerm);
-    console.log(resultArray);
-    if (resultArray.length) buildSearchResults(resultArray);
-    setStatsLine(resultArray.length);
+    console.log(finalTerm);
+    if (finalTerm != undefined) {
+        const resultArray = await retrieveSearchResults(finalTerm);
+        console.log(resultArray);
+        if (resultArray.length) buildSearchResults(resultArray);
+        setStatsLine(resultArray.length);
+    };
 }
 
 function getSearchTerm() {
@@ -142,10 +145,11 @@ function processSearchResults(results) {
 }
 
 function buildSearchResults(resultArray) {
-    document.getElementById("searchBox").style.display = "initial";
+    addClass();
     resultArray.forEach(result => {
         const resultItem = createResultItems(result);
         const resultContents = document.createElement("div");
+        resultContents.classList.add("searchContents");
         if (result.img) {
             const resultImage = createResultImage(result);
             resultContents.append(resultImage);
@@ -160,9 +164,9 @@ function buildSearchResults(resultArray) {
 
 function createResultItems(result) {
     const resultItem = document.createElement("div");
-    resultItem.classList.add("resultItem");
+    resultItem.classList.add("searchItems");
     const resultTitle = document.createElement("div");
-    resultTitle.classList.add("resultTitle");
+    resultTitle.classList.add("searchTitle");
     const link = document.createElement("a");
     link.href = `https://en.wikipedia.org/?curid=${result.id}`;
     link.textContent = result.title;
@@ -199,6 +203,20 @@ function setStatsLine(numberOfResults) {
     }
 }
 
+function addClass() {
+    document.getElementById("searchBox").classList.add("searchBox");
+    document.getElementById("searchForm").classList.add("form");
+    document.getElementById("g").classList.add("alphabets");
+    document.getElementById("o").classList.add("alphabets");
+    document.getElementById("o2").classList.add("alphabets");
+    document.getElementById("g2").classList.add("alphabets");
+    document.getElementById("l").classList.add("alphabets");
+    document.getElementById("e").classList.add("alphabets");
+    document.getElementById("main").classList.add("main");
+    document.getElementById("header").classList.add("none");
+    document.getElementById("search").style.marginTop = "0";
+}
+
 function extras() {
     document.getElementById("lan").addEventListener("click", (Lan) => {
         Lan = prompt("Which language can you write?", "Other than english and hindi");
@@ -214,4 +232,13 @@ function extras() {
 
 function setSearchFocus() {
     document.getElementById("searchBar").focus();
+}
+
+function mainHeight() {
+    const footerHeight = document.getElementById("footer").clientHeight;
+    const headerHeight = document.getElementById("header").clientHeight;
+    const fullHeight = window.innerHeight;
+    const main = document.getElementById("main");
+    const mainHeight = fullHeight - footerHeight - headerHeight - 88 - 44;
+    main.style.minHeight = `${mainHeight}px`;
 }

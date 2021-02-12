@@ -19,7 +19,7 @@
 6. create menu-->
 
 <body>
-    <header>
+    <header id="header">
         <nav>
             <ul>
                 <li>
@@ -33,47 +33,48 @@
                 </li>
                 <li>
                     <a href="">
-                        <div id="G">G</div>
+                        <div id="G"></div>
                     </a>
                 </li>
             </ul>
         </nav>
     </header>
-    <main>
-        <section id="google">
-            <span class="blue">G</span>
-            <span class="red">o</span>
-            <span class="yellow">o</span>
-            <span class="blue">g</span>
-            <span class="green">l</span>
+    <main id="main">
+        <h1>A Google Clone Powered By wikipedia</h1>
+        <section id="google" aria-hidden="true">
+            <span class="blue" id="g">G</span>
+            <span class="red" id="o">o</span>
+            <span class="yellow" id="o2">o</span>
+            <span class="blue" id="g2">g</span>
+            <span class="green" id="l">l</span>
             <span class="red" id="e">e</span>
         </section>
         <section id="search">
             <form id="searchForm">
                 <div id="is">
                     <i class="fas fa-search" id="spng"></i>
+                    <label for="searchBar">Enter a search term or text</label>
                     <input type="text" title="Search" id="searchBar">
                     <i class="fas fa-microphone" id="vpng"></i>
-                    <i class="fas fa-times" id="crosspng" tabindex="0" role="button"></i>
+                    <i class="fas fa-times" id="crosspng" tabindex="0" role="button" aria-label="clear entry field"></i>
+                    <p id="clearConfirmation" aria-live="assertive"></p>
                 </div>
-                <!-- when api is called -->
-                <!-- <hr style="width: 90%;margin: 0 auto;border-color: #0000001a;"> -->
                 <div id="searchBox">
-                    <div id="stats"></div>
+                    <div id="stats" aria-live="assertive"></div>
                     <div id="searchResults">
-                        <div class="searchItems">
+                        <!-- <div class="searchItems">
                             <div class="searchTitle">
-                                <a href="">dog</a>
+                                <a href="">Dachshund</a>
                             </div>
                             <div class="searchContents">
-                                <img src="" alt="">
-                                <p>Dog are obedient.</p>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Short-haired-Dachshund.jpg/50px-Short-haired-Dachshund.jpg" alt="Dachshund">
+                                <p>"The dachshund (UK: DAKS-ənd, DASH-, -⁠huund, -⁠huunt or US: DAHKS..."</p>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
                 <div id="bt">
-                    <button>Google Search</button>
+                    <button aria-label="submit">Google Search</button>
                     <button id="lucky">I'm Feeling Lucky</button>
                 </div>
             </form>
@@ -81,7 +82,7 @@
         <section id="dl">Google offered in: <a href="#">हिन्दी </a><a href="#" id="lan"> বাংলা తెలుగు मराठी தமிழ் ગુજરાતી ಕನ್ನಡ മലയാളം ਪੰਜਾਬੀ</a>
         </section>
     </main>
-    <footer>
+    <footer id="footer">
         <div class="footer">India</div>
         <div class="footer" id="f2">
             <span>

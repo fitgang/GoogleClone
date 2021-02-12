@@ -8,6 +8,7 @@
     font-family: Arial, Helvetica, sans-serif;
     box-sizing: border-box;
     font-size: 22px;
+    transition-duration: 500ms;
     @include mq(2000px) {
         font-size: 30px;
     }
@@ -67,13 +68,18 @@ header {
 }
 
 main {
-    height: calc(90vh - 5.8rem);
+    min-height: calc(100vh - 12.4rem);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
+    margin-bottom: 2rem;
     @include mq(700px) {
-        height: calc(95vh - 5.8rem);
+        min-height: calc(100vh - 9.5rem);
+    }
+    h1 {
+        position: absolute;
+        left: -100000px;
     }
     span {
         font-size: 3rem;
@@ -82,7 +88,6 @@ main {
         @include mq(600px) {
             font-size: 4.5rem;
         }
-        ;
     }
     .blue {
         color: #4285f4;
@@ -97,11 +102,13 @@ main {
         color: #34a853;
     }
     #e {
+        display: inline-block;
         transform: rotate(-15deg);
     }
     #search {
         margin: 1.5rem auto;
         width: 100%;
+        margin-bottom: 0.6rem;
         @include mq(700px) {
             width: 90%;
         }
@@ -121,14 +128,13 @@ form {
         height: 2.3rem;
         text-align: center;
         margin: 0px auto;
-        margin-bottom: 1.5rem;
-        @include mq(375px) {
-            margin-right: 15px;
-            margin-left: 15px;
-        }
         #spng {
             color: #4285f4;
             vertical-align: middle;
+        }
+        label {
+            position: absolute;
+            left: -100000px;
         }
         input {
             border: none;
@@ -137,6 +143,7 @@ form {
             vertical-align: middle;
             height: 100%;
             writing-mode: sideways-lr !important;
+            font-size: 0.9rem;
             @include mq(960px) {
                 width: calc(100% - 85px);
             }
@@ -161,16 +168,21 @@ form {
             cursor: pointer;
             vertical-align: text-top;
             outline: none;
+            transition-duration: initial;
+        }
+        #clearConfirmation {
+            position: absolute;
+            left: -100000px;
         }
     }
     #is:hover,
     #is:focus {
         box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.3);
-        // when api is called
-        // box-shadow:0px -1px 7px 0px rgb(0,0,0,0.3);
+        transition-duration: initial;
     }
     #bt {
         text-align: center;
+        margin: 19px auto;
         button {
             font-size: 0.7rem;
             border: none;
@@ -180,10 +192,12 @@ form {
         }
         button:hover {
             box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+            transition-duration: initial;
         }
         button:focus {
             border: 1px solid #4d90fe;
             outline: none;
+            transition-duration: initial;
         }
     }
 }
@@ -201,7 +215,7 @@ footer {
     .footer {
         background-color: #f2f2f2;
         border-top: 1px solid #dadce0;
-        color: rgba(0, 0, 0, 0.54);
+        color: #000000ab;
         line-height: 30px;
         font-size: 0.7rem;
         padding-left: 15px;
@@ -210,7 +224,7 @@ footer {
         }
         a {
             font-size: 0.7rem;
-            color: rgba(0, 0, 0, .54);
+            color: #000000ab;
             padding-right: 15px;
         }
     }
@@ -228,3 +242,26 @@ footer {
 }
 
 @import "_results";
+//
+// WHEN  API  IS  CALLED
+//
+.main {
+    margin-top: 1rem;
+    min-height: calc(100vh - 8.8rem);
+}
+
+.alphabets {
+    font-size: 1.8rem;
+    letter-spacing: normal;
+}
+
+.form {
+    border: 1px solid #0000001a;
+    border-top: 0;
+    box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.301);
+    border-radius: 30px;
+}
+
+.none {
+    display: none;
+}
