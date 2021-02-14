@@ -6,7 +6,7 @@ document.addEventListener("readystatechange", (event) => {
 });
 
 function initApp() {
-    // mainHeight();
+     mainHeight();
     setSearchFocus();
     // 3 listeners
     const input = document.getElementById("searchBar");
@@ -239,6 +239,6 @@ function mainHeight() {
     const headerHeight = document.getElementById("header").clientHeight;
     const fullHeight = window.innerHeight;
     const main = document.getElementById("main");
-    const mainHeight = fullHeight - footerHeight - headerHeight - 88 - 44;
+    const mainHeight = fullHeight - footerHeight - headerHeight - 111;
     main.style.minHeight = `${mainHeight}px`;
 }
