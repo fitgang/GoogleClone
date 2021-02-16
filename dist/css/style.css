@@ -79,6 +79,7 @@ header nav ul li a #G {
 }
 
 main {
+  min-height: calc(100vh - 12.5rem);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -91,6 +92,12 @@ main {
           align-items: center;
   margin-top: 2rem;
   margin-bottom: 2rem;
+}
+
+@media screen and (min-width: 370px) {
+  main {
+    min-height: calc(100vh - 10.9rem);
+  }
 }
 
 @media screen and (min-width: 700px) {

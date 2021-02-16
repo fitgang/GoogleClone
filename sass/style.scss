@@ -68,11 +68,15 @@ header {
 }
 
 main {
+    min-height: calc(100vh - 12.5rem);
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 2rem;
     margin-bottom: 2rem;
+    @include mq(370px) {
+        min-height: calc(100vh - 10.9rem);
+    }
     @include mq(700px) {
         min-height: calc(100vh - 9.5rem);
     }
