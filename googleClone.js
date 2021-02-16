@@ -6,7 +6,7 @@ document.addEventListener("readystatechange", (event) => {
 });
 
 function initApp() {
-     mainHeight();
+    //mainHeight();
     setSearchFocus();
     // 3 listeners
     const input = document.getElementById("searchBar");
