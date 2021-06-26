@@ -1,415 +1,375 @@
 * {
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  font-size: 22px;
-  -webkit-transition-duration: 500ms;
-          transition-duration: 500ms;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+    font-size: 22px;
+    transition-duration: 500ms;
 }
 
 @media screen and (min-width: 2000px) {
-  * {
-    font-size: 30px;
-  }
+    * {
+        font-size: 30px;
+    }
 }
 
 html,
 body {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
 
 a {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 a:hover {
-  text-decoration: underline;
+    text-decoration: underline;
 }
 
 header nav ul {
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
 }
 
 header nav ul li {
-  padding-right: 0.55rem;
+    padding-right: 0.55rem;
 }
 
 @media screen and (min-width: 700px) {
-  header nav ul li {
-    padding-right: 1rem;
-  }
+    header nav ul li {
+        padding-right: 1rem;
+    }
 }
 
 header nav ul li a {
-  font-size: 0.7rem;
-  vertical-align: middle;
-  color: #000000de;
+    font-size: 0.7rem;
+    vertical-align: middle;
+    color: #000000de;
 }
 
 header nav ul li a #menu {
-  color: #737373;
+    color: #737373;
 }
 
 header nav ul li a #G {
-  background-color: blueviolet;
-  width: 34px;
-  height: 34px;
-  text-align: center;
-  border: 5px solid blueviolet;
-  border-radius: 50%;
-  color: white;
+    background-color: blueviolet;
+    width: 34px;
+    height: 34px;
+    text-align: center;
+    border: 5px solid blueviolet;
+    border-radius: 50%;
+    color: white;
 }
 
 @media screen and (min-width: 960px) {
-  header nav ul li a #G {
-    width: 40px;
-    height: 40px;
-    border: 7px solid blueviolet;
-  }
+    header nav ul li a #G {
+        width: 40px;
+        height: 40px;
+        border: 7px solid blueviolet;
+    }
 }
 
 main {
-  min-height: calc(100vh - 12.5rem);
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+    min-height: calc(100vh - 12.5rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 @media screen and (min-width: 370px) {
-  main {
-    min-height: calc(100vh - 10.9rem);
-  }
+    main {
+        min-height: calc(100vh - 10.9rem);
+    }
 }
 
 @media screen and (min-width: 700px) {
-  main {
-    min-height: calc(100vh - 9.5rem);
-  }
+    main {
+        min-height: calc(100vh - 9.5rem);
+    }
 }
 
 main h1 {
-  position: absolute;
-  left: -100000px;
+    position: absolute;
+    left: -100000px;
 }
 
 main span {
-  font-size: 3rem;
-  font-family: 'Inter', sans-serif;
-  letter-spacing: -0.5rem;
+    font-size: 3rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: -0.5rem;
 }
 
 @media screen and (min-width: 600px) {
-  main span {
-    font-size: 4.5rem;
-  }
+    main span {
+        font-size: 4.5rem;
+    }
 }
 
 main .blue {
-  color: #4285f4;
+    color: #4285f4;
 }
 
 main .red {
-  color: #e94235;
+    color: #e94235;
 }
 
 main .yellow {
-  color: #fabb05;
+    color: #fabb05;
 }
 
 main .green {
-  color: #34a853;
+    color: #34a853;
 }
 
 main #e {
-  display: inline-block;
-  -webkit-transform: rotate(-15deg);
-          transform: rotate(-15deg);
+    display: inline-block;
+    transform: rotate(-15deg);
 }
 
 main #search {
-  margin: 1.5rem auto;
-  width: 100%;
-  margin-bottom: 0.6rem;
+    margin: 1.5rem auto;
+    width: 100%;
+    margin-bottom: 0.6rem;
 }
 
 @media screen and (min-width: 700px) {
-  main #search {
-    width: 90%;
-  }
+    main #search {
+        width: 90%;
+    }
 }
 
 @media screen and (min-width: 960px) {
-  main #search {
-    width: 70%;
-  }
+    main #search {
+        width: 70%;
+    }
 }
 
 @media screen and (min-width: 1245px) {
-  main #search {
-    width: 50%;
-  }
+    main #search {
+        width: 50%;
+    }
 }
 
 form #is {
-  border: 1px solid #e7e7e7;
-  border-radius: 50px;
-  height: 2.3rem;
-  text-align: center;
-  margin: 0px auto;
+    border: 1px solid #e7e7e7;
+    border-radius: 50px;
+    height: 2.3rem;
+    text-align: center;
+    margin: 0px auto;
 }
 
 form #is #spng {
-  color: #4285f4;
-  vertical-align: middle;
+    color: #4285f4;
+    vertical-align: middle;
 }
 
 form #is label {
-  position: absolute;
-  left: -100000px;
+    position: absolute;
+    left: -100000px;
 }
 
 form #is input {
-  border: none;
-  padding: 0;
-  width: calc(100% - 76px);
-  vertical-align: middle;
-  height: 100%;
-  -webkit-writing-mode: sideways-lr !important;
-      -ms-writing-mode: sideways-lr !important;
-          writing-mode: sideways-lr !important;
-  font-size: 0.9rem;
+    border: none;
+    padding: 0;
+    width: calc(100% - 76px);
+    vertical-align: middle;
+    height: 100%;
+    -webkit-writing-mode: sideways-lr !important;
+    -ms-writing-mode: sideways-lr !important;
+    writing-mode: sideways-lr !important;
+    font-size: 0.9rem;
 }
 
 @media screen and (min-width: 960px) {
-  form #is input {
-    width: calc(100% - 85px);
-  }
+    form #is input {
+        width: calc(100% - 85px);
+    }
 }
 
 form #is input:focus {
-  outline: none;
+    outline: none;
 }
 
 form #is #vpng {
-  vertical-align: middle;
-  color: #93c7c6;
-  display: initial;
+    vertical-align: middle;
+    color: #93c7c6;
+    display: initial;
 }
 
 form #is #crosspng {
-  vertical-align: middle;
-  display: none;
+    vertical-align: middle;
+    display: none;
 }
 
 form #is #crosspng:hover,
 form #is #crosspng:focus {
-  color: #e94235;
-  padding-bottom: 5px;
-  border-bottom: 1px solid #e94235;
-  cursor: pointer;
-  vertical-align: text-top;
-  outline: none;
-  -webkit-transition-duration: initial;
-          transition-duration: initial;
+    color: #e94235;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e94235;
+    cursor: pointer;
+    vertical-align: text-top;
+    outline: none;
+    transition-duration: initial;
 }
 
 form #is #clearConfirmation {
-  position: absolute;
-  left: -100000px;
+    position: absolute;
+    left: -100000px;
 }
 
 form #is:hover,
 form #is:focus {
-  -webkit-box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.3);
-          box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.3);
-  -webkit-transition-duration: initial;
-          transition-duration: initial;
+    box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.3);
+    transition-duration: initial;
 }
 
 form #bt {
-  text-align: center;
-  margin: 19px auto;
+    text-align: center;
+    margin: 19px auto;
 }
 
 form #bt button {
-  font-size: 0.7rem;
-  border: none;
-  background-color: #f8f9fa;
-  padding: 13px 12px;
-  margin: auto 5px;
+    font-size: 0.7rem;
+    border: none;
+    background-color: #f8f9fa;
+    padding: 13px 12px;
+    margin: auto 5px;
 }
 
 form #bt button:hover {
-  -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-          box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
-  -webkit-transition-duration: initial;
-          transition-duration: initial;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    transition-duration: initial;
 }
 
 form #bt button:focus {
-  border: 1px solid #4d90fe;
-  outline: none;
-  -webkit-transition-duration: initial;
-          transition-duration: initial;
+    border: 1px solid #4d90fe;
+    outline: none;
+    transition-duration: initial;
 }
 
 #dl {
-  text-align: center;
-  font-size: 0.7rem;
+    text-align: center;
+    font-size: 0.7rem;
 }
 
 #dl a {
-  font-size: 0.7rem;
+    font-size: 0.7rem;
 }
 
 footer {
-  width: 100%;
+    width: 100%;
 }
 
 footer .footer {
-  background-color: #f2f2f2;
-  border-top: 1px solid #dadce0;
-  color: #000000ab;
-  line-height: 30px;
-  font-size: 0.7rem;
-  padding-left: 15px;
+    background-color: #f2f2f2;
+    border-top: 1px solid #dadce0;
+    color: #000000ab;
+    line-height: 30px;
+    font-size: 0.7rem;
+    padding-left: 15px;
 }
 
 @media screen and (min-width: 960px) {
-  footer .footer {
-    line-height: 40px;
-  }
+    footer .footer {
+        line-height: 40px;
+    }
 }
 
 footer .footer a {
-  font-size: 0.7rem;
-  color: #000000ab;
-  padding-right: 15px;
+    font-size: 0.7rem;
+    color: #000000ab;
+    padding-right: 15px;
 }
 
 @media screen and (min-width: 700px) {
-  footer #f2 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-  }
+    footer #f2 {
+        display: flex;
+        justify-content: space-between;
+    }
 }
 
 @media screen and (min-width: 700px) {
-  footer #f2 br {
-    display: none;
-  }
+    footer #f2 br {
+        display: none;
+    }
 }
 
 #searchBox,
 .searchBox {
-  margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
 }
 
 @media screen and (min-width: 700px) {
-  #searchBox,
-  .searchBox {
-    padding: 0 7px;
-  }
+    #searchBox,
+    .searchBox {
+        padding: 0 7px;
+    }
 }
 
 #searchBox #stats,
 .searchBox #stats {
-  font-size: 0.7rem;
-  padding-top: 10px;
-  padding-left: 10px;
-  color: #5f5b5be6;
+    font-size: 0.7rem;
+    padding-top: 10px;
+    padding-left: 10px;
+    color: #5f5b5be6;
 }
 
 #searchBox .searchItems,
 .searchBox .searchItems {
-  padding-left: 10px;
-  padding-top: 10px;
-  padding-right: 10px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+    padding-left: 10px;
+    padding-top: 10px;
+    padding-right: 10px;
+    display: flex;
+    flex-direction: column;
 }
 
 #searchBox .searchItems a,
 .searchBox .searchItems a {
-  text-decoration: underline;
-  color: purple;
-  font-size: 0.85rem;
+    text-decoration: underline;
+    color: purple;
+    font-size: 0.85rem;
 }
 
 #searchBox .searchItems .searchContents,
 .searchBox .searchItems .searchContents {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-top: 10px;
+    display: flex;
+    margin-top: 10px;
 }
 
 #searchBox .searchItems .searchContents img,
 .searchBox .searchItems .searchContents img {
-  padding-right: 15px;
+    padding-right: 15px;
 }
 
 #searchBox .searchItems .searchContents p,
 .searchBox .searchItems .searchContents p {
-  display: inline-block;
-  font-size: 0.7rem;
-  margin: 0;
+    display: inline-block;
+    font-size: 0.7rem;
+    margin: 0;
 }
 
 .main {
-  margin-top: 1rem;
-  min-height: calc(100vh - 8.8rem);
+    margin-top: 1rem;
+    min-height: calc(100vh - 8.8rem);
 }
 
 .alphabets {
-  font-size: 1.8rem;
-  letter-spacing: normal;
+    font-size: 1.8rem;
+    letter-spacing: normal;
 }
 
 .form {
-  border: 1px solid #0000001a;
-  border-top: 0;
-  -webkit-box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.301);
-          box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.301);
-  border-radius: 30px;
+    border: 1px solid #0000001a;
+    border-top: 0;
+    box-shadow: 0px 2px 7px 1px rgba(0, 0, 0, 0.301);
+    border-radius: 30px;
 }
 
 .none {
-  display: none;
+    display: none;
 }
-/*# sourceMappingURL=style.css.map */
