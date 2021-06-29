@@ -5,3 +5,4 @@
 The clone is designed by using compiled <strong><i>sass</i></strong>.
 And it also has <strong><i>accessibility</i></strong> features making it suitable for screen readers.</p>
 <img src="img/googleClone.jpg" alt="googleClone" width="250">
+Thanks to freecodecamp for the tutorial.
